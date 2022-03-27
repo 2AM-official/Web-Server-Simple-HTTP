@@ -1,8 +1,4 @@
-# TritonHTTP
-
-## Spec Summary
-
-Here we provide a concise summary of the TritonHTTP spec. You should read the spec doc for more details and clarifications.
+# Web Server with Simple HTTP Protocol
 
 ### HTTP Messages
 
@@ -49,20 +45,6 @@ When to update the timeout?
 
 What is the timeout value?
 - 5 seconds.
-
-## Implementation
-
-Please limit your implimentation to the following files, because we'll only copy over these files for grading:
-- `pkg/tritonhttp/`
-  - `request.go`
-  - `response.go`
-  - `server.go`
-
-There are some utility functions defined in `pkg/tritonhttp/util.go` that you might find useful.
-
-You can (and are encouraged to) extend the tests (both unit and e2e tests) for your local testing. We'll use the same testing framework for grading, just with different test cases.
-
-In terms of effort level, note that our solution involved writing 293 lines of new code (127 in server.go, 102 in request.go, and 64 in response.go).
 
 ## Usage
 
@@ -135,12 +117,3 @@ cat test/testdata/requests/single/OKBasic.txt | nc localhost 8080
 ```
 
 You'll see the response printed out. And you could look at your server's logging to debug.
-
-## Submission
-
-Either submit through GitHub, or:
-```
-make submission
-```
-
-And upload the generated `submission.zip` file to Gradescope.
